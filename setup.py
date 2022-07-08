@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = '<name>_ros2'
+package_name = 'ghostnet_ros2'
 
 setup(
     name=package_name,
@@ -31,7 +31,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            '<name>_ros2 = <name>_ros2.<name>_ros2:main'
+            'ghostnet_ros2 = ghostnet_ros2.ghostnet_ros2:main'
         ],
     },
 )
