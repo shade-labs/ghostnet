@@ -29,7 +29,7 @@ COPY . ./src/ghostnet_ros2
 
 RUN pip3 install ./src/ghostnet_ros2 && \
     : "Install the model" && \
-    python3 -c "from transformers import AutoFeatureExtractor; AutoFeatureExtractor.from_pretrained('${MODEL_NAME}')" && \
+    python3 -c "import torch; model = torch.hub.load('huawei-noah/ghostnet', 'ghostnet_1x', pretrained=True);model.eval()" && \
     colcon build
 
 ENTRYPOINT ["/home/shade/shade_ws/start.sh"]
