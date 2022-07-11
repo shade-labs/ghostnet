@@ -17,12 +17,12 @@ RUN apt update && \
     echo "source /opt/shade/setup.sh" >> /home/shade/shade_ws/start.sh && \
     echo "source /opt/ros/${ROS_VERSION}/setup.sh" >> /home/shade/shade_ws/start.sh && \
     echo "source ./install/setup.sh" >> ./start.sh && \
-    echo "ros2 run ghostnet_ros2 ghostnet_ros2" >> /home/shade/shade_ws/start.sh && \
+    echo "ros2 run ghostnet ghostnet" >> /home/shade/shade_ws/start.sh && \
     chmod +x ./start.sh
 
-COPY . ./src/ghostnet_ros2
+COPY . ./src/ghostnet
 
-RUN pip3 install ./src/ghostnet_ros2 && \
+RUN pip3 install ./src/ghostnet && \
     : "Install the model" && \
     python3 -c "import torch; model = torch.hub.load('huawei-noah/ghostnet', 'ghostnet_1x', pretrained=True);model.eval()" && \
     colcon build
