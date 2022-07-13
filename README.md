@@ -23,7 +23,7 @@ This makes GhostNet readily useable on embedded systems such as the Jetson devic
 
 # Usage
 ## Run the GhostNet Node 
-Run ```docker run -t ghostnet```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes.
+Run ```docker run -v /dev/shm:/dev/shm --net=host shaderobotics/ghostnet:${ROS2_DISTRO}```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes.
 
 For more details explaining how to run Docker images, visit the official Docker documentation [here](https://docs.docker.com/engine/reference/run/). Also, additional information as to how ROS2 communicates between external environment or multiple docker containers, visit the official ROS2 (foxy) docs [here](https://docs.ros.org/en/foxy/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html#). 
 
