@@ -2,6 +2,11 @@
 
 This is a ROS2 wrapper for the image classification algorithm, [GhostNet](https://arxiv.org/abs/1911.11907). We utilize `pytorch` and `torch.hub` for the [source of the algorithm](https://pytorch.org/hub/pytorch_vision_ghostnet/). The main idea is for this container to act as a standalone interface and node, removing the necessity to integrate separate packages and solve numerous dependency issues.
 
+Efficient networks by generating more features from cheap operations. Based on a set of intrinsic feature maps, GhostNet applies a series of linear transformations with cheap cost to generate many ghost feature maps that could fully reveal information underlying intrinsic features. The proposed Ghost module can be taken as a plug-and-play component to upgrade existing convolutional neural networks. Ghost bottlenecks are designed to stack Ghost modules, and then the lightweight GhostNet can be easily established.
+
+This makes GhostNet readily useable on embedded systems such as the Jetson devices.
+
+
 # Installation Guide
 
 ## Using Docker Pull
