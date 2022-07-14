@@ -36,7 +36,7 @@ def predict(image: Image):
     # model predicts one of the 1000 ImageNet classes
     probabilities = torch.nn.functional.softmax(output[0], dim=0)
     with open("imagenet_classes.txt", "r") as f:
-        categories = [s.strip() for s in f.readlines()]
+        categories = [s.strip().split(',')[1].strip() for s in f.readlines()]
 
     predicted_label = probabilities.argmax(-1).item()
 
