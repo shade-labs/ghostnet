@@ -3,9 +3,9 @@
 <package format="3">
   <name>ghostnet</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="lidar@todo.todo">lidar</maintainer>
-  <license>TODO: License declaration</license>
+  <description>GhostNet is an efficient network by generating more features from cheap operations. Based on a set of intrinsic feature maps, GhostNet applies a series of linear transformations with cheap cost to generate many ghost feature maps that could fully reveal information underlying intrinsic features. We attach an image classification head.</description>
+  <maintainer email="support@shaderobotics.com">Shade Robotics</maintainer>
+  <license>apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
