@@ -21,6 +21,7 @@ RUN apt update && \
     chmod +x ./start.sh
 
 COPY . ./src/ghostnet
+COPY ./ghostnet/imagenet_classes.txt .
 
 RUN pip3 install ./src/ghostnet && \
     : "Install the model" && \
